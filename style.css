@@ -1,0 +1,407 @@
+/* ========================================
+   fingo.digital
+   ======================================== */
+
+:root {
+  --bg:          #1a1714;
+  --bg-raised:   #231f1b;
+  --bg-hover:    #2c2622;
+  --text:        #e8e0d4;
+  --text-muted:  #9a8e7f;
+  --accent:      #c4956a;
+  --accent-soft: #c4956a33;
+  --border:      #3a332c;
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body:    'DM Sans', -apple-system, sans-serif;
+
+  --max-width: 860px;
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  6rem;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+/* ---- Navigation ---- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--bg);
+}
+
+/* subtle fade at bottom edge of sticky nav */
+.nav::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  right: 0;
+  height: 1.5rem;
+  background: linear-gradient(var(--bg), transparent);
+  pointer-events: none;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.nav-logo span {
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+/* ---- Hero ---- */
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-lg);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+/* ---- Sections ---- */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.section h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: var(--space-xs);
+  color: var(--text);
+}
+
+.section-intro {
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+  max-width: 520px;
+}
+
+/* ---- Project Cards ---- */
+.project-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.project-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--space-md);
+  transition: border-color 0.3s;
+}
+
+.project-card:hover {
+  border-color: var(--accent-soft);
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.project-meta time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.project-status {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2em 0.7em;
+  border-radius: 3px;
+}
+
+.status-active {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.status-complete {
+  color: var(--text-muted);
+  background: var(--bg-hover);
+}
+
+.status-paused {
+  color: var(--text-muted);
+  background: var(--bg-hover);
+}
+
+.project-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-bottom: var(--space-xs);
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: var(--space-sm);
+}
+
+.project-stack span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+.project-links a {
+  font-size: 0.9rem;
+}
+
+/* ---- Journal Entries ---- */
+.journal-list {
+  display: grid;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.journal-entry {
+  background: var(--bg);
+  padding: var(--space-md);
+  transition: background 0.2s;
+}
+
+.journal-entry:hover {
+  background: var(--bg-raised);
+}
+
+.journal-entry time {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.journal-entry h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0.3rem 0;
+}
+
+.journal-entry h3 a {
+  color: var(--text);
+}
+
+.journal-entry h3 a:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.journal-entry p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* ---- Journal Page (individual entry) ---- */
+.journal-page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.journal-page-header {
+  margin-bottom: var(--space-lg);
+}
+
+.back-link {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
+
+.back-link:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.journal-page-header time {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.journal-page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.journal-page-body {
+  max-width: 620px;
+}
+
+.journal-page-body p {
+  margin-bottom: var(--space-sm);
+  color: var(--text-muted);
+}
+
+.journal-page-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.journal-page-body em {
+  color: var(--text);
+  font-style: italic;
+}
+
+.journal-page-body code {
+  font-size: 0.9em;
+  background: var(--bg-raised);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+/* ---- About ---- */
+.about-content {
+  max-width: 600px;
+}
+
+.about-content p {
+  margin-bottom: var(--space-sm);
+  color: var(--text-muted);
+}
+
+.about-content p:first-child {
+  color: var(--text);
+}
+
+/* ---- Footer ---- */
+.footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+
+.footer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .nav {
+    padding: var(--space-sm);
+  }
+
+  .nav-links {
+    gap: var(--space-sm);
+  }
+
+  .hero,
+  .section {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  .hero {
+    padding-top: var(--space-lg);
+  }
+
+  .project-card {
+    padding: var(--space-sm);
+  }
+}

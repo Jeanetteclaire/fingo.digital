@@ -1,0 +1,22 @@
+# fingo.digital — Netlify config
+
+[build]
+  publish = "."
+
+# Clean URLs (removes .html from paths)
+[[redirects]]
+  from = "/journal/first-entry"
+  to = "/journal/first-entry.html"
+  status = 200
+
+# Add more journal entries here as you create them:
+# [[redirects]]
+#   from = "/journal/your-new-entry"
+#   to = "/journal/your-new-entry.html"
+#   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
