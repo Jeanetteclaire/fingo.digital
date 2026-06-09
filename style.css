@@ -15,7 +15,8 @@
   --font-display: 'DM Serif Display', Georgia, serif;
   --font-body:    'DM Sans', -apple-system, sans-serif;
 
-  --max-width: 860px;
+  --max-width: 1080px;
+  --max-width-prose: 680px;
   --space-xs:  0.5rem;
   --space-sm:  1rem;
   --space-md:  2rem;
@@ -126,7 +127,7 @@ a:hover {
 .hero p {
   font-size: 1.15rem;
   color: var(--text-muted);
-  max-width: 520px;
+  max-width: var(--max-width-prose);
 }
 
 /* ---- Sections ---- */
@@ -147,13 +148,19 @@ a:hover {
 .section-intro {
   color: var(--text-muted);
   margin-bottom: var(--space-lg);
-  max-width: 520px;
+  max-width: var(--max-width-prose);
 }
 
 /* ---- Project Cards ---- */
 .project-grid {
   display: grid;
   gap: var(--space-md);
+}
+
+@media (min-width: 720px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .project-card {
@@ -234,6 +241,68 @@ a:hover {
 
 .project-links a {
   font-size: 0.9rem;
+}
+
+/* ---- Collapsible project details ---- */
+.project-what {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+}
+
+.project-details {
+  margin-bottom: var(--space-sm);
+}
+
+.project-details summary {
+  font-size: 0.85rem;
+  color: var(--accent);
+  cursor: pointer;
+  padding: var(--space-xs) 0;
+  list-style: none;
+  user-select: none;
+}
+
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-details summary::before {
+  content: '+ ';
+}
+
+.project-details[open] summary::before {
+  content: '− ';
+}
+
+.project-details summary:hover {
+  opacity: 0.75;
+}
+
+.project-details[open] summary {
+  margin-bottom: var(--space-sm);
+}
+
+.project-field {
+  margin-bottom: var(--space-md);
+}
+
+.project-field:last-child {
+  margin-bottom: var(--space-xs);
+}
+
+.project-field h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.project-field p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
 }
 
 /* ---- Journal Entries ---- */
@@ -356,7 +425,7 @@ a:hover {
 
 /* ---- About ---- */
 .about-content {
-  max-width: 600px;
+  max-width: 100%;
 }
 
 .about-content p {
@@ -379,19 +448,6 @@ a:hover {
 .footer p {
   font-size: 0.85rem;
   color: var(--text-muted);
-}
-
-/* ---- Images ---- */
-.project-img,
-.journal-img {
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  margin: var(--space-sm) 0;
-}
-
-.project-img {
-  margin-top: var(--space-sm);
 }
 
 /* ---- Responsive ---- */
