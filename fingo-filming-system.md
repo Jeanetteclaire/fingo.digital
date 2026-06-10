@@ -174,4 +174,4 @@ Amsterdam light is flat on grey days, creamy and diffused yellow in summer. Both
 
 ---
 
-*fingo.digital — built by hand, documented honestly.*
+*fingo.digital — ideas by me, built with Claude, documented honestly.*
