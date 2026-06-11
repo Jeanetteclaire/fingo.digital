@@ -195,19 +195,19 @@ a:hover {
   border-radius: 3px;
 }
 
-.status-active {
+.status-ongoing {
   color: var(--accent);
   background: var(--accent-soft);
-}
-
-.status-complete {
-  color: var(--text-muted);
-  background: var(--bg-hover);
 }
 
 .status-paused {
   color: var(--text-muted);
   background: var(--bg-hover);
+}
+
+.status-abandoned {
+  color: #a07070;
+  background: #a0707020;
 }
 
 .project-card h3 {
@@ -303,6 +303,26 @@ a:hover {
 .project-field p {
   color: var(--text-muted);
   font-size: 0.92rem;
+}
+
+.project-field ul {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  list-style: none;
+  padding: 0;
+}
+
+.project-field ul li {
+  padding-left: 1em;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.project-field ul li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
 }
 
 /* ---- Journal Entries ---- */
