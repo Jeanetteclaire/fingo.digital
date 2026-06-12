@@ -165,8 +165,8 @@
       <!-- ---- HONEYCOMB ---- -->
       <article class="project-card">
         <div class="project-meta">
-          <span class="project-status status-ongoing">Ongoing</span>
-          <time>2026 –</time>
+          <span class="project-status status-abandoned">Abandoned</span>
+          <time>2026</time>
         </div>
         <h3>Honeycomb</h3>
         <p class="project-what">A personal thinking dashboard. A cluster of debossed hexagon tiles — each one a topic holding tasks, ideas, links, and notes — with a brain-and-heartbeat line drawing draped across them. Transparent Electron window on the laptop, PWA on the phone, both pointing at the same Supabase row.</p>
@@ -174,23 +174,36 @@
           <summary>More about this project</summary>
           <div class="project-field">
             <h4>Why on earth did I build this?</h4>
-            <p>[placeholder — why did you build Honeycomb?]</p>
+            <p>I wanted a functional dashboard that was aesthetic and subtle . . . that didn't pull my focus and scream at me about everything that I was behind on and everything I needed to do . . . instead it just sat quietly until I needed it.</p>
           </div>
           <div class="project-field">
             <h4>What's sh*t about it . .</h4>
-            <p>[placeholder — what's broken, fragile, or ugly? Why are you glad you built it anyway?]</p>
+            <p>A LOT!! I mostly never use it.</p>
+            <ul>
+              <li>The subtle look I built is so subtle you can't find anything or remember where anything is.</li>
+              <li>The shape of the design doesn't really work with a phone screen so although I do have it on my phone (and it even syncs across the platform on reload!!) the card to enter data is just so small and totally the wrong shape to make an actual entry easy.</li>
+              <li>Friction is high!!! And that's why I ultimately abandoned it.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Stuff I got right!</h4>
-            <p>[placeholder — what worked well? What are you proud of?]</p>
+            <ul>
+              <li>I finally nailed the organic look I was after. When I learned the right words . . . <em>frayed not broken</em> . . . I managed to describe to Claude what I actually wanted.</li>
+              <li>Despite being useless I find it very pleasing to look at. My "beautiful thing to look at" idea was spot on.</li>
+              <li>Supabase!! A free way to keep the laptop and phone in sync. It was really easy to set up and works well. A free database that keeps all your apps in sync across devices without having to build a back end myself . . . like magic and did I say free!!</li>
+              <li>Using the transparent Electron wrapper — the idea of something floating, sitting on top of everything else on my desktop, I find enchanting. Claudette has a butterfly icon and one day (possibly when there is more than 24 hours in a day!) I will put it into a transparent Electron wrapper so she can fly around freely on my desktop to get my attention.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Gems I learned . . . and try never to forget . . .</h4>
-            <p>[placeholder — what did this project teach you?]</p>
+            <p>I already knew "context is everything" . . . now I know <em>"friction kills"</em> . . . all apps. I never realised how frictionless production apps really are till I made my own high friction versions. If use is not easy and frictionless there just isn't time in my life to faff around with copy paste, click click, click, manual sync . . . or worse it only exists on my laptop not on my phone so I would have to wait to use it . . . or more accurately forget to use it by the time I'm back at my laptop!</p>
+            <p>BUT this app was not a total write off. I became so frustrated by the crappy results of trying to explain visual ideas to Claude. In the end I drew it myself in Figma . . . and had a revelation . . . I realised that if I needed an inset shadow with a blur of 3 to get the look I wanted . . . tell Claude I need an inset shadow with blur of 3 and Ta Dah!!!! He knows exactly what you are talking about.</p>
+            <p>So I learned to use the Figma CSS descriptions and language to tell Claude what I wanted. I created a Figma-to-language pipeline and now I know how to brief Claude on a visual design.</p>
+            <p>Inkscape was another software discovery and I used the autotrace to create an SVG file that looked like an actual brush stroke and was an exact copy of the uploaded file.</p>
           </div>
           <div class="project-field">
             <h4>If only I had known I would have done it so differently . . . .</h4>
-            <p>[placeholder — what would you change?]</p>
+            <p>Not much . . . it was a pretty crappy execution of a decent idea from the start but I wanted what I wanted, fought for it and got a pretty crappy app.</p>
           </div>
           <div class="project-field">
             <h4>Stack</h4>
@@ -199,6 +212,8 @@
               <span>Supabase</span>
               <span>PWA</span>
               <span>HTML/CSS/JS</span>
+              <span>Figma</span>
+              <span>Inkscape</span>
             </div>
           </div>
         </details>
@@ -216,23 +231,32 @@
           <summary>More about this project</summary>
           <div class="project-field">
             <h4>Why on earth did I build this?</h4>
-            <p>[placeholder — why did you build Plustaal?]</p>
+            <p>Trying to learn Dutch in Amsterdam is an impossible task!! Especially in the Jordaan where every fucker speaks English. I hate studying so I wanted a frictionless way to practice when I have 10 minutes spare in between other things, while I am waiting. I also wanted something tailored to my level . . . B2 in many ways with lots of B1 level grammar missing . . . a hard to define place.</p>
           </div>
           <div class="project-field">
             <h4>What's sh*t about it . .</h4>
-            <p>[placeholder — what's broken, fragile, or ugly? Why are you glad you built it anyway?]</p>
+            <ul>
+              <li>The code is buggy — it works but incorrectly. The tile sizes drift over time because I stored the result instead of the source — it compounds on itself and slowly gets wrong.</li>
+              <li>The code is untidy. Several operations are included in one function, it needs refactoring.</li>
+              <li>It requires honesty in the last 2 levels to decide if your answer was close enough to the example answer — you are not told correct or incorrect. OK for me, maybe rubbish for someone else.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Stuff I got right!</h4>
-            <p>[placeholder — what worked well? What are you proud of?]</p>
+            <ul>
+              <li>The concept . . . I bloody love it. It's so simple. You can't choose the topic you study because nothing is labelled, but you also can't avoid a topic you don't like . . . because nothing is labelled . . . and best of all the evidence of your work produces art . . . the various sized plus signs on the front page create patterns based on which study topic you completed. It's living evidence of your effort presented in a beautiful way.</li>
+              <li>The snap scroll between levels works really well.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Gems I learned . . . and try never to forget . . .</h4>
-            <p>[placeholder — what did this project teach you?]</p>
+            <p>Future Claude's I build with are now under strict instructions: one operation per function (the Single Responsibility Principle), the simplest code solutions possible, nothing complicated or fancy. Always ask why this way and not the simpler way.</p>
+            <p>Also cache . . . cache drifts away from the reality of the file and drift is the tax you pay for caching . . . it costs you in accuracy and functionality. Not good. If you have the processing power, time and money to recompute every time, do it . . . it's the cleanest and best way!</p>
           </div>
           <div class="project-field">
             <h4>If only I had known I would have done it so differently . . . .</h4>
-            <p>[placeholder — what would you change?]</p>
+            <p>There is something about the design that is off — I would have designed the UI better. Although I still haven't really figured it out, it's missing something. The front page is good, the font is not the best but it's OK . . . but the level pages, there is definitely something lacking. I can feel what's wrong but I don't have the vocabulary for it yet.</p>
+            <p>The obvious thing is I would have challenged Claude more about his coding choices, but I knew even less then than I know now . . . and if it worked I just trusted his decisions . . . "it works" is not enough now.</p>
           </div>
           <div class="project-field">
             <h4>Stack</h4>
@@ -260,23 +284,34 @@
           <summary>More about this project</summary>
           <div class="project-field">
             <h4>Why on earth did I build this?</h4>
-            <p>[placeholder — why did you build Strata?]</p>
+            <p>I love patterns and data so visualisations of data is very much my thing. I wanted to see the patterns in my behaviour, why I do what I do and how much I can learn from being aware of how history has shaped me and if I can change it . . . if I want to.</p>
           </div>
           <div class="project-field">
             <h4>What's sh*t about it . .</h4>
-            <p>[placeholder — what's broken, fragile, or ugly? Why are you glad you built it anyway?]</p>
+            <ul>
+              <li>It's REALLY hard to assign tags to events so it takes a long time to use.</li>
+              <li>Lots of friction — I often notice something in passing in my life and think oooo I should log that in Strata and then can't find the time and forget it.</li>
+              <li>I forget to use it. It has a gratitude journal that I did write in religiously but now I forget . . . it needs some kind of a reminder system.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Stuff I got right!</h4>
-            <p>[placeholder — what worked well? What are you proud of?]</p>
+            <ul>
+              <li>The visualisation of the behavioural patterns — I find them really useful, they actually work. The app itself has helped me enormously to choose how to be in particular situations, to not just be a victim of hidden patterns. Again knowledge is power! Knowing I tend to withdraw and build walls helps me recognise full-on bricklaying activity when it happens . . . and now I choose to stop building my walls. I practised not doing it so much that not building them became the new habit.</li>
+              <li>Limiting the tags available to stop the library growing. Creating a glossary so I can remember what I was trying to define with different terms . . . humans are messy and trying to flatten the human experience is hard. I am the territory not the map, but the map needs to be as accurate as I can make it.</li>
+              <li>Keeping the data in local .md files so it stays very private. No one will know my internal struggles . . . except what I write here of course.</li>
+              <li>Adding other sections — the gratitude journal in particular. I can see it being useful for other self-care apps, not for AI to guess at telling me something generically good, but for my own old gratitudes to be presented to me to remind me of who the hell I am and how lucky I am. A kick up the bum and a hug from past me.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Gems I learned . . . and try never to forget . . .</h4>
-            <p>[placeholder — what did this project teach you?]</p>
+            <p>Keep it simple. Don't embellish unnecessarily. Build the smallest possible version of my idea and see if it sticks. Use it for 3 months and re-evaluate. Maybe I decide it's a pile of crap and a waste of time . . . then it's good that I didn't waste my time building excessive structure.</p>
+            <p>Write a very clear brief if you ever want to get to where you are planning to go. This just kind of evolved . . . I got away with it this time but it's not a great system to ensure success. The 3D earth cloud story was a great motivator, an exciting visual to get the project off the ground . . . not the actual thing, but that's often the way it works . . . build the actual thing first.</p>
           </div>
           <div class="project-field">
             <h4>If only I had known I would have done it so differently . . . .</h4>
-            <p>[placeholder — what would you change?]</p>
+            <p>This idea started off as a very complex 3D rendered visual with mapping onto earth, sky, clouds and all other kinds of crazy unnecessary visuals that added nothing to my understanding of my behaviour and would have been a nightmare to actually achieve. I spent a good bit of time arguing for this with Claude and it really got in the way of what the concept was actually about. I wish I had had a clearer vision of what the project was . . . not the exciting visual.</p>
+            <p>I also wish I had (well I guess I still could . . . the joy of building apps yourself!!) — there should be a generic inbox to catch all thoughts to be sorted later. Life happens too fast to sort everything in the moment. An inbox at least gives me a hope of getting the data logged.</p>
           </div>
           <div class="project-field">
             <h4>Stack</h4>
@@ -294,32 +329,34 @@
       <!-- ---- WAVES ---- -->
       <article class="project-card">
         <div class="project-meta">
-          <span class="project-status status-ongoing">Ongoing</span>
-          <time>2026</time>
+          <span class="project-status status-not-started">Not started</span>
+          <time>2026 –</time>
         </div>
         <h3>Waves</h3>
-        <p class="project-what">A scrolling ocean scene built with SVG, GSAP, and ScrollTrigger. Fish jump, a boat bobs, a whale drifts below. The sea darkens as you scroll deeper — bright turquoise at the surface, deep navy at the ocean floor. Each layer moves at a different speed, creating the illusion of depth.</p>
+        <p class="project-what">A scrolling ocean scene built with SVG, GSAP, and ScrollTrigger. Fish jump, a boat bobs, a whale drifts below. The sea darkens as you scroll deeper — bright turquoise at the surface, deep navy at the ocean floor. Each layer moves at a different speed, creating the illusion of depth. Currently in the design concept stage.</p>
         <details class="project-details">
           <summary>More about this project</summary>
           <div class="project-field">
             <h4>Why on earth did I build this?</h4>
-            <p>[placeholder — why did you build Waves?]</p>
+            <p>Well I have not yet built anything — I'm in the design concept space, adding pictures to FigJam . . . but I want to build it because I discovered parallax during the Novo project and I found someone online on Codepen (or Codependent as Claudette and I call it) who has built the most beautiful parallax scroll. So I am using his code and concept to build a smaller version of my own. Not copy the code but learn from it.</p>
           </div>
           <div class="project-field">
             <h4>What's sh*t about it . .</h4>
-            <p>[placeholder — what's broken, fragile, or ugly? Why are you glad you built it anyway?]</p>
+            <p>Nothing yet — it doesn't exist yet.</p>
           </div>
           <div class="project-field">
             <h4>Stuff I got right!</h4>
-            <p>[placeholder — what worked well? What are you proud of?]</p>
+            <ul>
+              <li>I am actually designing this from the start, using the right tools for the right process.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Gems I learned . . . and try never to forget . . .</h4>
-            <p>[placeholder — what did this project teach you?]</p>
+            <p>Not a lot to report on yet but my mood board has two distinctive styles of image — no way could they coexist so I had to choose . . . but that means I have actually <em>had</em> a choice . . . not just blindly followed my first instinct like it was a given.</p>
           </div>
           <div class="project-field">
             <h4>If only I had known I would have done it so differently . . . .</h4>
-            <p>[placeholder — what would you change?]</p>
+            <p>Ask me when there's something to regret.</p>
           </div>
           <div class="project-field">
             <h4>Stack</h4>
@@ -328,6 +365,7 @@
               <span>GSAP</span>
               <span>ScrollTrigger</span>
               <span>HTML/CSS</span>
+              <span>FigJam</span>
             </div>
           </div>
         </details>
@@ -336,7 +374,7 @@
       <!-- ---- TELEPROMPTER ---- -->
       <article class="project-card">
         <div class="project-meta">
-          <span class="project-status status-ongoing">Ongoing</span>
+          <span class="project-status status-completed">Completed</span>
           <time>2026</time>
         </div>
         <h3>Teleprompter</h3>
@@ -345,23 +383,29 @@
           <summary>More about this project</summary>
           <div class="project-field">
             <h4>Why on earth did I build this?</h4>
-            <p>[placeholder — why did you build the Teleprompter?]</p>
+            <p>At one time in my life I had aspirations of becoming a UGC person . . . till I realised I have about as much enthusiasm for performing and selling stupid face creams and other crap as I have for cleaning the toilet . . . but while I was deluded enough to pursue this I needed a teleprompter, so I built one (may as well use that Claude subscription I am paying for for something, right!)</p>
           </div>
           <div class="project-field">
             <h4>What's sh*t about it . .</h4>
-            <p>[placeholder — what's broken, fragile, or ugly? Why are you glad you built it anyway?]</p>
+            <ul>
+              <li>A design decision to not be able to film with the native phone camera while I used the teleprompter . . . I was also deluded enough to think I was actually going to get out my big camera to film a 30-second UGC video . . . when everyone knows you really only need a phone. So when I use the app I look at the phone screen not the camera . . . weird or what??? Not really useable unless you manage to position the app in the perfect place above the camera.</li>
+              <li>I let Claude make a decision for me that sounded reasonable . . . but it was wrong for what I actually needed.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Stuff I got right!</h4>
-            <p>[placeholder — what worked well? What are you proud of?]</p>
+            <ul>
+              <li>I commissioned some cartoon style icons from a girl on Fiverr . . . they definitely add a touch of whimsy and uniqueness to the app. It's cute and simple and it works.</li>
+              <li>Knowing when to stop . . . when it is done. This app is not a new concept or a world-changing kind of build. I could always refine and improve but it is enough and I will give my attention to other things now. I have done what I wanted, I know it's not perfect but I am not aware of things that would make it better. Stopping is harder than I thought but the 80/20 rule wins here and like gravity there is no denying it.</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Gems I learned . . . and try never to forget . . .</h4>
-            <p>[placeholder — what did this project teach you?]</p>
+            <p>Claude will often try to persuade you to take the easy option, hence the no-use-of-native-camera decision . . . I'm not saying he is wrong . . . but I now make it a considered choice, and don't just fold to keep the peace. If I have to tell him twice I do that. I don't find it easy (he is really really nice and polite after all and tries really hard) but I figure he wants to get the job done as well as possible, so sometimes I push back a bit harder to make sure that happens.</p>
           </div>
           <div class="project-field">
             <h4>If only I had known I would have done it so differently . . . .</h4>
-            <p>[placeholder — what would you change?]</p>
+            <p>Decided to use the native camera to film at the same time, obvs!! Not started a UGC journey . . . it was never gonna be my bag.</p>
           </div>
           <div class="project-field">
             <h4>Stack</h4>
@@ -390,23 +434,31 @@
           <summary>More about this project</summary>
           <div class="project-field">
             <h4>Why on earth did I build this?</h4>
-            <p>[placeholder — why did you build fingo.digital?]</p>
+            <p>I don't see very many people like me, women in their 50's learning about coding and using AI. I am sure I'm not the only one but I thought I might have a story some people might like to see. If I can inspire one other person who is interested in this kind of thing (but is too intimidated to start) . . . to actually start . . . I'd call that success.</p>
+            <p>I also wanted a place I could document my own achievements . . . to see how far I have come . . . because when you are on the inside with the mountain in front of you, you tend to never look back and see how far away the ground is. fingo.digital helps me to see the ground clearly and appreciate the journey.</p>
           </div>
           <div class="project-field">
             <h4>What's sh*t about it . .</h4>
-            <p>[placeholder — what's broken, fragile, or ugly? Why are you glad you built it anyway?]</p>
+            <ul>
+              <li>It's so obviously built by AI . . . sorry Claude . . . they do love a black background . . . but at the moment the other projects are the priority, not the website that holds them (even though it is actually a project too). One day I will design a website and build some of the code myself. I'm just not there yet.</li>
+              <li>It has no UI to update it. I have to go back to Claude for every entry . . . or into the code and copy paste blocks . . . time consuming much!!!!</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Stuff I got right!</h4>
-            <p>[placeholder — what worked well? What are you proud of?]</p>
+            <ul>
+              <li>It works, it does the job and it holds the records I want for future reference. This was a choice not a default and for someone who used to focus on the pretty packaging, could not tolerate the ugly version . . . it's quite a milestone.</li>
+              <li>I didn't pay anyone for anything except the domain name . . . it's hosted for free on Netlify, which is appropriate for the kind of site it is. It would have been stupid to pay Squarespace when I am probably the only person visiting for now!</li>
+            </ul>
           </div>
           <div class="project-field">
             <h4>Gems I learned . . . and try never to forget . . .</h4>
-            <p>[placeholder — what did this project teach you?]</p>
+            <p>Keep it real. I write as I speak . . . including the swearing . . . I sometimes tidy a little to make the text clearer and easier to understand but I don't edit . . . this is my voice, this is me.</p>
+            <p>Writing to Claudette and Claude has helped me practise this. I am not a writer, I am a doer and a visual person. Writing does not come easy to me but writing to AI has helped me develop a voice and a way of writing . . . it has come in handy in the end. I didn't set out to find my writing voice. It arrived as a side effect of having somewhere to write every day without anyone judging the mess.</p>
           </div>
           <div class="project-field">
             <h4>If only I had known I would have done it so differently . . . .</h4>
-            <p>[placeholder — what would you change?]</p>
+            <p>Nothing yet — it's a very new site so I haven't bumped up against anything.</p>
           </div>
           <div class="project-field">
             <h4>Stack</h4>

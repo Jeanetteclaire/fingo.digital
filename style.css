@@ -210,6 +210,17 @@ a:hover {
   background: #a0707020;
 }
 
+.status-not-started {
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.status-completed {
+  color: #7a9a6a;
+  background: #7a9a6a20;
+}
+
 .project-card h3 {
   font-family: var(--font-display);
   font-size: 1.35rem;
